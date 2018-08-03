@@ -1,4 +1,4 @@
-# JavaScript Drum Kit
+# Flex Panels Image Gallery
 Project completed for the 30 day vanilla JS coding challenge. Simply a clock to show the current time.
 
 ## License
