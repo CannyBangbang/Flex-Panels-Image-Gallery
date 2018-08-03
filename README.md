@@ -1,5 +1,5 @@
 # Flex Panels Image Gallery
-Project completed for the 30 day vanilla JS coding challenge. Simply a clock to show the current time.
+Project completed for the 30 day vanilla JS coding challenge. Using flex to expand images of my dog with text.
 
 ## License
 This project is licensed under the Apache License - see the LICENSE file for details
