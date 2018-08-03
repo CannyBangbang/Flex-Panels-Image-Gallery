@@ -1,42 +1,7 @@
-@media screen and (max-width: 767px) {
-    body {
-        font-size: 1.2em;
-    }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-    body {
-        font-size: 1.4em;
-    }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-    body {
-        font-size: 1.6em;
-    }
-}
-@media screen and (min-width: 1200px) {
-    body {
-        font-size: 1.8em;
-    }
-}
 body {
     font-family: 'Kirang Haerang', cursive;
+    text-transform: uppercase;
     margin: 0;
-}
-.image-container {
-    display: flex;
-    min-height:100vh;
-    overflow: hidden;
-}
-.image {
-    color:#AFF5F4;
-    text-align: center;
-    align-items:center;
-    font-size: 70px;
-    background-size:cover;
-    background-position:center;
-}
-.name {
-    font-size: 200px;
 }
 #image1 {
     background-image: url(https://s3.us-east-2.amazonaws.com/bigby.flex.panel.image.gallery/IMG_0496.JPG);
@@ -45,12 +10,64 @@ body {
     background-image: url(https://s3.us-east-2.amazonaws.com/bigby.flex.panel.image.gallery/IMG_0612.JPG);
 }
 #image3 {
-    background-image: url(https://s3.us-east-2.amazonaws.com/bigby.flex.panel.image.gallery/IMG_0682.JPG);
-    
+    background-image: url(https://s3.us-east-2.amazonaws.com/bigby.flex.panel.image.gallery/IMG_0682.JPG); 
 }
 #image4 {
     background-image: url(https://s3.us-east-2.amazonaws.com/bigby.flex.panel.image.gallery/IMG_0711.JPG);
 }
 #image5 {
     background-image: url(https://s3.us-east-2.amazonaws.com/bigby.flex.panel.image.gallery/IMG_0549.JPG);
+}
+.image-container {
+    display: flex;
+    min-height:100vh;
+    overflow: hidden;
+}
+.image {
+    color:rgb(205, 244, 253);
+    text-align: center;
+    align-items:center;
+    font-size: 70px;
+    background-size:cover;
+    background-position:center;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition:
+        font-size 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        flex 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+        background 0.2s;
+    box-shadow:inset 0 0 0 3px rgba(0, 0, 0, 0.192);
+}
+.image > * {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+.image > *:first-child {
+    transform: translateY(-100%);
+}
+.image.open-active > *:first-child {
+    transform: translateY(0%);
+}
+.image > *:last-child {
+    transform: translateY(100%);
+}
+.image.open-active > *:last-child {
+    transform: translateY(0%);
+}
+.image.open {
+    flex: 4;
+    font-size: 50px;
+}
+.image > p {
+    text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+}
+.name {
+    font-size: 200px;
 }
